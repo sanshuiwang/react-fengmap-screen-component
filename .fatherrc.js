@@ -12,9 +12,10 @@ export default {
   //     react: 'React'
   //   }
   // },
-  cssModules: {
-    generateScopedName: '[name]__[local]___[hash:base64:5]'
-  },
+  lessInRollupMode: {},
+  // cssModules: {
+  //   generateScopedName: '[name]__[local]___[hash:base64:5]'
+  // },
   extraRollupPlugins: [
     commonjs({
       namedExports: { react: Object.keys(react) }
