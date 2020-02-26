@@ -1,6 +1,6 @@
 {
   "name": "react-fengmap-screen-component",
-  "version": "0.0.2-1",
+  "version": "0.0.2-2",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -13,7 +13,7 @@
     "doc:dev": "father doc dev",
     "doc:build-deploy": "father doc build && father doc deploy",
     "build": "father build",
-    "postinstall": "cpx ./public/fengmap/fengmap.min.js ../fengmap/build --clean && cp -r -i ./public/react-fengmap-2.9.5.1/. ../react-fengmap/dist"
+    "postinstall": "cpx ./public/fengmap/fengmap.min.js ../fengmap/build --clean && cp -r ./public/react-fengmap-2.9.5.1/. ../react-fengmap/dist"
   },
   "husky": {
     "hooks": {
