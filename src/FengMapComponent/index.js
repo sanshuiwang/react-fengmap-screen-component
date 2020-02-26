@@ -13,8 +13,7 @@ import {
 } from 'react-fengmap'
 import _ from 'lodash'
 
-// eslint-disable-next-line no-unused-vars
-import styles from './index.less'
+import './index.less'
 
 class Map extends PureComponent {
   constructor(props) {
