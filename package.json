@@ -1,6 +1,6 @@
 {
   "name": "react-fengmap-screen-component",
-  "version": "0.0.2",
+  "version": "0.0.2-1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -13,7 +13,7 @@
     "doc:dev": "father doc dev",
     "doc:build-deploy": "father doc build && father doc deploy",
     "build": "father build",
-    "postinstall": "cpx ./public/fengmap/fengmap.min.js ../node_modules/fengmap/build --clean && cp -r -i ./public/react-fengmap-2.9.5.1/. ../node_modules/react-fengmap/dist"
+    "postinstall": "cpx ./public/fengmap/fengmap.min.js ../fengmap/build --clean && cp -r -i ./public/react-fengmap-2.9.5.1/. ../react-fengmap/dist"
   },
   "husky": {
     "hooks": {
@@ -73,19 +73,20 @@
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0",
     "prettier-eslint-cli": "^5.0.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "cpx": "^1.5.0"
+    "rollup-plugin-commonjs": "^10.1.0"
   },
   "peerDependencies": {
-    "prop-types": ">=15.7.0",
-    "react": ">=16.8.0",
+    "cpx": "^1.5.0",
     "fengmap": "^2.2.0",
-    "react-fengmap": "^2.9.5"
+    "react-fengmap": "^2.9.5",
+    "prop-types": ">=15.7.0",
+    "react": ">=16.8.0"
   },
   "dependencies": {
+    "cpx": "^1.5.0",
     "fengmap": "^2.2.0",
-    "prop-types": "^15.7.2",
+    "react-fengmap": "^2.9.5",
     "react": "^16.10.2",
-    "react-fengmap": "^2.9.5"
+    "prop-types": "^15.7.2"
   }
 }
