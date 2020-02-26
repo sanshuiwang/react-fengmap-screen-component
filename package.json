@@ -1,0 +1,88 @@
+{
+  "name": "react-fengmap-screen-component",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "typings": "typings/index.d.ts",
+  "author": "sanshuiwang <768188667@qq.com> (https://github.com/sanshuiwang)",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "doc:dev": "father doc dev",
+    "doc:build-deploy": "father doc build && father doc deploy",
+    "build": "father build",
+    "postinstall": "cpx ./public/fengmap/fengmap.min.js ./node_modules/fengmap/build --clean && cp -r -i ./public/react-fengmap-2.9.5.1/. ./node_modules/react-fengmap/dist"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --max-warnings=1 --ignore-pattern !.fatherrc.js"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ]
+  },
+  "files": [
+    "dist",
+    "typings"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanshuiwang/react-fengmap-screen-component.git"
+  },
+  "keywords": [
+    "listen",
+    "resize",
+    "self-hook",
+    "HOC",
+    "normal function"
+  ],
+  "bugs": {
+    "url": "https://github.com/sanshuiwang/react-fengmap-screen-component/issues"
+  },
+  "homepage": "https://github.com/sanshuiwang/react-fengmap-screen-component#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-angular": "^8.2.0",
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "docz-plugin-splash": "^1.0.1",
+    "eslint": "6.x",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-react-app": "^5.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flowtype": "4.5.2",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "2.3.0",
+    "father": "^2.24.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "cpx": "^1.5.0"
+  },
+  "peerDependencies": {
+    "prop-types": ">=15.7.0",
+    "react": ">=16.8.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "fengmap": "^2.2.0",
+    "react-fengmap": "^2.9.5"
+  }
+}
