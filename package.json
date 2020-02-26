@@ -80,9 +80,9 @@
     "react": ">=16.8.0"
   },
   "dependencies": {
+    "fengmap": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
-    "fengmap": "^2.2.0",
     "react-fengmap": "^2.9.5"
   }
 }

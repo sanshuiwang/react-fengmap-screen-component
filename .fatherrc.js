@@ -6,12 +6,12 @@ export default {
     type: 'rollup'
   },
   cjs: 'rollup',
-  umd: {
-    name: 'ReactFengmapScreenComponent',
-    globals: {
-      react: 'React'
-    }
-  },
+  // umd: {
+  //   name: 'ReactFengmapScreenComponent',
+  //   globals: {
+  //     react: 'React'
+  //   }
+  // },
   cssModules: {
     generateScopedName: '[name]__[local]___[hash:base64:5]'
   },
