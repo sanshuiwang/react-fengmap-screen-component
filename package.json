@@ -13,7 +13,7 @@
     "doc:dev": "father doc dev",
     "doc:build-deploy": "father doc build && father doc deploy",
     "build": "father build",
-    "postinstall": "cpx ./public/fengmap/fengmap.min.js ./node_modules/fengmap/build --clean && cp -r -i ./public/react-fengmap-2.9.5.1/. ./node_modules/react-fengmap/dist"
+    "postinstall": "cpx ./public/fengmap/fengmap.min.js ../node_modules/fengmap/build --clean && cp -r -i ./public/react-fengmap-2.9.5.1/. ../node_modules/react-fengmap/dist"
   },
   "husky": {
     "hooks": {
@@ -31,7 +31,8 @@
   },
   "files": [
     "dist",
-    "typings"
+    "typings",
+    "public"
   ],
   "repository": {
     "type": "git",
@@ -77,7 +78,9 @@
   },
   "peerDependencies": {
     "prop-types": ">=15.7.0",
-    "react": ">=16.8.0"
+    "react": ">=16.8.0",
+    "fengmap": "^2.2.0",
+    "react-fengmap": "^2.9.5"
   },
   "dependencies": {
     "fengmap": "^2.2.0",
