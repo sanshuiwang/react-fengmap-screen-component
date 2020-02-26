@@ -13,7 +13,7 @@ import {
 } from 'react-fengmap'
 import _ from 'lodash'
 
-import './index.less'
+import './index.css'
 
 class Map extends PureComponent {
   constructor(props) {
