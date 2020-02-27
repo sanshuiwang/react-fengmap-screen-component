@@ -13,7 +13,7 @@ import {
 } from 'react-fengmap'
 import _ from 'lodash'
 
-import './index.css'
+import './index.less'
 
 class Map extends PureComponent {
   constructor(props) {
@@ -24,11 +24,6 @@ class Map extends PureComponent {
     }
 
     this.fengBaseRef = React.createRef()
-  }
-
-  componentDidMount() {
-    const { navigation } = this.props
-    this.setState({ navigation })
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -101,7 +96,7 @@ class Map extends PureComponent {
           x: e.x,
           y: e.y,
           groupID: map.focusGroupID,
-          url: '/assets/endPointes.svg',
+          url: navigation.endPointUrl,
           size: 50,
           height: 2
         }
@@ -150,6 +145,8 @@ class Map extends PureComponent {
     } = this.props
 
     const { navigation } = this.state
+    console.log('navigation:: ', navigation)
+    console.log('navigation.floorLevel:: ', navigation.floorLevel)
     const startPoint = pointObj[navigation.floorLevel]
 
     const { endPoint } = this.state
@@ -206,7 +203,7 @@ class Map extends PureComponent {
           <FengmapResetControl
             ctrlOptions={{
               position: fengmapSDK.controlPositon.RIGHT_BOTTOM,
-              imgURL: '/assets/reset.png'
+              imgURL: mapOptionsNoPack.reload.imgURL
             }}
           />
         ) : null}
@@ -225,7 +222,7 @@ class Map extends PureComponent {
           <Fengmap3DControl
             ctrlOptions={{
               position: fengmapSDK.controlPositon.RIGHT_BOTTOM,
-              imgURL: '/assets/',
+              imgURL: mapOptionsNoPack.twoThreeD.imgURL,
               viewModeButtonNeeded: true,
               groupsButtonNeeded: false
             }}
@@ -235,8 +232,8 @@ class Map extends PureComponent {
         <FengmapCompassControl
           visible={authMapFeat.includes('compass')}
           image={{
-            bg: '/assets/compass_bg.png',
-            fg: '/assets/compass_fg.png'
+            bg: mapOptionsNoPack.compass.imageBg,
+            fg: mapOptionsNoPack.compass.imageFg
           }}
         />
 
