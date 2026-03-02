@@ -67,7 +67,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "2.3.0",
-    "father": "^2.24.1",
+    "father": "^4.6.13",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
